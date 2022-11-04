@@ -1,0 +1,21 @@
+CREATE TABLE User (
+    RollNumber varchar(10) NOT NULL PRIMARY KEY,
+    Email varchar(255) NOT NULL,
+    Username varchar(255) NOT NULL UNIQUE,
+    Password varchar(255) NOT NULL
+);
+
+INSERT INTO USER VALUES ('811819104002', 'ashwin@gmail.com', 'ashwin', 'hello@123');
+SELECT * FROM USER;
+
+INSERT INTO USER VALUES ('811819104014', 'yahoop@gmail.com', 'yahoop', 'pass67');
+SELECT * FROM USER;
+
+UPDATE USER SET EMAIL='ashwin@gmail.com' WHERE ROLLNUMBER='8118919104002';
+SELECT * FROM USER;
+
+DELETE FROM USER WHERE ROLLNUMBER='811819104002';
+SELECT * FROM USER;
+
+DELETE FROM USER WHERE USERNAME='yahoop';
+SELECT * FROM USER;
